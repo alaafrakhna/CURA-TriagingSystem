@@ -47,9 +47,10 @@ namespace TriagingSystem
                     builder.AllowAnyOrigin();
                 });
             });
-            var connection = @"Server=DESKTOP-8LFM531; Database=triagingDB; Trusted_Connection=True; ConnectRetryCount=0";
-            services.AddDbContext<triagingDBContext>(options => options.UseSqlServer(connection));
-            
+            //var connection = @"Server=DESKTOP-DQMKLIH; Database=triagingDB; Trusted_Connection=True; ConnectRetryCount=0";
+            //services.AddDbContext<triagingDBContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<triagingDBContext>(builder =>            {                builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
