@@ -91,7 +91,7 @@ namespace TriagingSystem.Services
 
             string[] keywords = removeStopWords(words);
             //keywords = EnglishStemmer(keywords);
-            keywords = lemmatizationWords(keywords);
+            //keywords = lemmatizationWords(keywords);
 
             return keywords;
         }
@@ -102,19 +102,19 @@ namespace TriagingSystem.Services
         /// <param name="word"></param>
         /// <param name="lemmatizer"></param>
         /// <returns></returns>
-        private static string[] lemmatizationWords(string[] words)
-        {
-            string[] result = new string[words.Length];
+        //private static string[] lemmatizationWords(string[] words)
+        //{
+        //    string[] result = new string[words.Length];
 
-            ILemmatizer lemmatizer = new LemmatizerPrebuiltCompact(LemmaSharp.LanguagePrebuilt.English);
+        //    ILemmatizer lemmatizer = new LemmatizerPrebuiltCompact(LemmaSharp.LanguagePrebuilt.English);
 
-            for (int i = 0; i < words.Length; i++)
-            {
-                result[i] = lemmatizer.Lemmatize(words[i].ToLower().Trim()).Trim();
-            }
+        //    for (int i = 0; i < words.Length; i++)
+        //    {
+        //        result[i] = lemmatizer.Lemmatize(words[i].ToLower().Trim()).Trim();
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
 
         private static string[] removeStopWords(string[] words)
