@@ -1,0 +1,23 @@
+once:
+git remote add taqwaOrigin https://github.com/TaqwaSleem/CURA-TriagingSystem.git
+
+------------
+every modifiying:
+git clone https://github.com/salsabel-baraghithi/CURA-TriagingSystem.git
+
+git checkout -b taqwa
+
+git add .
+
+git commit -m ""
+
+git checkout master
+
+git merge taqwa
+
+git push -u taqwaOrigin master
+
+--------------
+To Fetch the specified remote’s copy of the current branch and immediately merge it into the local copy:
+git pull origin
+
