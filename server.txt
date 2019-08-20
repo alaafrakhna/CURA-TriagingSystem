@@ -1,0 +1,5 @@
+Cura1150722_115
+username : cura
+server: cura2\SQLEXPRESS
+
+http://cura.eastus.cloudapp.azure.com/api/user/getAllUsers
