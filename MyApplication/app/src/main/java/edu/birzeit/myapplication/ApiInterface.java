@@ -36,7 +36,7 @@ interface ApiInterface {
     @GET("/api/users/{userID}") /////////
     long initCase(@Path("userID") long userID);
 
-    @GET("/api/unknown/{recordID}") ///
+    @GET("/api/unknown/{recordID}") ///mocky
     String getFirstStep(@Path("recordID") long recordID);
 
     @POST("/api/Answer")
@@ -48,14 +48,10 @@ interface ApiInterface {
     @GET("/api/user/getUserRecord/{userID}")
     Call<List<UserRecord>> getUserRecords(@Path("userID") long userID);
 
-    @GET("{mocky}")
-        // @GET("/api/user/getTrustedContact/{userID}")
-  //  Call<List<TrustedContact>> getUserTrustedContact(@Path("userID") long userID);
-     Call<List<TrustedContact>> getUserTrustedContact(@Path("mocky") String mocky);
+    @GET("/api/user/getTrustedContact/{userID}")
+    Call<List<TrustedContact>> getUserTrustedContact(@Path("userID") long userId);
 
-    @GET("{mocky}")
-        // @GET("/api/user/getTrustedContact/{userID}")
-        //  Call<List<TrustedContact>> getUserTrustedContact(@Path("userID") long userID);
+    @GET("{}")
     Call<String> deleteUserTrustedContact(@Path("mocky") String mocky);
 
     @DELETE("/api/user/PuttrustedContact/{trustedContactID}")

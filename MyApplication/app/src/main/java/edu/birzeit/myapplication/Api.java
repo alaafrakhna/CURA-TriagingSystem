@@ -20,7 +20,7 @@ package edu.birzeit.myapplication;
 
 public class Api {
 
-    private static final String BASE_URL = "http://www.mocky.io/v2/";
+    private static final String BASE_URL = "http://cura.eastus.cloudapp.azure.com/";
     private static Retrofit retrofit = null;
 
     static ApiInterface getClient() {

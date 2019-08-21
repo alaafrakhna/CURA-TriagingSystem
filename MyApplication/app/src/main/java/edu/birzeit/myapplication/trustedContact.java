@@ -54,7 +54,8 @@ public class trustedContact extends AppCompatActivity {
     public void getUsersList(){
         try {
 
-            Call<List<TrustedContact>> repos = Api.getClient().getUserTrustedContact("5cf6373b320000fd2f8cd0b4");
+            long id = 2;
+            Call<List<TrustedContact>> repos = Api.getClient().getUserTrustedContact(id);
             repos.enqueue(new Callback<List<TrustedContact>>() {
 
                 @Override
